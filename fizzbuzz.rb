@@ -1,17 +1,17 @@
 # Don't forget! This file needs to be 'required' in its spec file
 # See README.md for instructions on how to do this
 
-def fizzbuzz(int)
-  if int % 3 == 0 && int % 5 == 0
-   return "FizzBuzz"
-  end
-
-  if int % 5 == 0
-   return "Buzz"
-  end
-
-  if int % 3 == 0
-   return "Fizz"
-  end
-
+(1..100).each do |n|
+    i_3=(n%3==0)
+    i_5=(n%5==0)
+    case
+        when i_3&&i_5
+            puts 'fizzbuzz'
+        when i_3
+            puts 'fizz'
+        when i_5
+            puts 'buzz'
+        else
+            puts n
+    end
 end
